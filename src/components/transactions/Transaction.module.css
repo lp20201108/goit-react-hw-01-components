@@ -1,0 +1,24 @@
+  
+.table {
+   margin-top: 50px;
+  width: 500px;
+  border: 1px solid black;
+}
+
+.headRow {
+  height: 50px;
+  background-color: rgb(106, 110, 110);
+}
+
+.headData {
+  width: 200px;
+}
+
+.tableBody {
+  text-align: center;
+}
+
+.tableRow {
+  height: 50px;
+  border: 1px solid black;
+}

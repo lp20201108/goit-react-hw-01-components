@@ -1,0 +1,41 @@
+
+.list{
+ list-style: none;
+}
+
+.list__item{
+    display: flex;
+    align-items: center;
+    width: 200px;
+    margin-bottom: 10px;
+}
+
+.status {
+  width: 7px;
+  height: 7px;
+  margin-right: 5px;
+  border-radius: 30%;
+  background-color: rgb(46, 167, 86);
+}
+
+.status__offline {
+  composes: status;
+  background-color: rgb(228, 125, 125);
+}
+
+.avatar{
+    margin: 5px;
+    border-radius: 20%;
+    box-shadow: 0 7px 15px rgba(0, 0, 0, 0.411);
+}
+
+.name{
+    font-size: 18px;
+    margin-left: 10px;
+    font-weight: bold;
+}
+
+.online{
+    composes: name;
+    text-decoration: underline green;
+}
