@@ -1,8 +1,4 @@
 
-.list{
- list-style: none;
-}
-
 .list__item{
     display: flex;
     align-items: center;
@@ -21,12 +17,6 @@
 .status__offline {
   composes: status;
   background-color: rgb(228, 125, 125);
-}
-
-.avatar{
-    margin: 5px;
-    border-radius: 20%;
-    box-shadow: 0 7px 15px rgba(0, 0, 0, 0.411);
 }
 
 .name{

@@ -5,7 +5,7 @@ import Friend from "./FriendItem";
 
 const FriendList = ({ friends }) => (
   <section>
-    <ul>
+    <ul className="list">
       {friends.map((item) => (
         <Friend {...item} key={item.id} />
       ))}

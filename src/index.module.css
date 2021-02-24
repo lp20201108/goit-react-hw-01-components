@@ -12,3 +12,24 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
 }
+
+:global(.list){
+  list-style: none;
+}
+
+:global(.listItem) {
+margin: 5px;
+padding: 5px;
+}
+
+
+:global(.avatar) {
+    border-radius: 10%;
+    box-shadow: 0 7px 15px rgba(0, 0, 0, 0.411);
+}
+
+:global(.name){
+  font-size: 20px;
+  margin-left: 10px;
+  font-weight: bold;
+}
