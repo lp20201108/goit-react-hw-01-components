@@ -1,7 +1,7 @@
 .profile {
   padding-top: 20px;
   width: 300px;
-  height: 350px;
+  height: auto;
   margin-top: 20px;
   text-align: center;
   border: solid 1px #d8e0ea;
@@ -28,11 +28,6 @@
   color: rgb(45, 12, 163);
 }
 
-.stats {
-  display: flex;
-  list-style: none;
-  margin-right: 0px;
-}
 
 .item {
   margin-right: 10px;

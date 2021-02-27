@@ -2,42 +2,40 @@ import PropTypes from "prop-types";
 import React from "react";
 import defaultImg from "./default-img.jpg";
 import styles from "./Profile.module.css";
+import { Title, List } from "./ProfileStyled";
+import StatsList from "./statsList";
 
-const Profile = ({
-  name,
-  tag,
-  location,
-  avatar,
-  stats: { followers, views, likes },
-}) => (
-  <div className={styles.profile}>
-    <div className={styles.description}>
-      <img
-        src={avatar}
-        alt="Аватар пользователя"
-        className={` avatar ${styles.avatar}`}
-      />
-      <p className="name">{name}</p>
-      <p className={styles.tag}>@{tag}</p>
-      <p className={styles.location}>{location}</p>
+const Profile = ({ name, tag, location, avatar, stats }) => {
+  const getNewData = (data) => {
+    const newData = Object.keys(data).map((key) => ({
+      name: key.charAt(0).toUpperCase() + key.slice(1),
+      value: data[key],
+    }));
+    return newData;
+  };
+
+  return (
+    <div className={styles.profile}>
+      <Title> Hello! I am a title styled with styled.components </Title>
+      <div className={styles.description}>
+        <img
+          src={avatar}
+          alt="Аватар пользователя"
+          className={` avatar ${styles.avatar}`}
+        />
+        <p className="name">{name}</p>
+        <p className={styles.tag}>@{tag}</p>
+        <p className={styles.location}>{location}</p>
+      </div>
+
+      <List>
+        {getNewData(stats).map((item, index) => (
+          <StatsList newData={index} item={item} />
+        ))}
+      </List>
     </div>
-
-    <ul className={styles.stats}>
-      <li className={styles.item}>
-        <span className={styles.label}>Followers</span>
-        <span className={styles.quantity}>{followers}</span>
-      </li>
-      <li className={styles.item}>
-        <span className={styles.label}>Views</span>
-        <span className={styles.quantity}>{views}</span>
-      </li>
-      <li className={styles.item}>
-        <span className={styles.label}>Likes</span>
-        <span className={styles.quantity}>{likes}</span>
-      </li>
-    </ul>
-  </div>
-);
+  );
+};
 
 Profile.defaultProps = {
   avatar: defaultImg,

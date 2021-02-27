@@ -7,14 +7,19 @@ import user from "../data-base/user.json";
 import friends from "../data-base/friends.json";
 import statisticalData from "../data-base/statistical-data.json";
 import transactions from "../data-base/transactions.json";
+// import {
+//   user,
+//   friends,
+//   statisticalData,
+//   transactions,
+// } from "../data-base/index";
 
 const App = () => {
   return (
     <>
-      <Profile {...user} />;
-      <FriendList friends={friends} />;
-      <Statistics title="Upload stats" stats={statisticalData} />;
-      {/* <Statistics stats={statisticalData} />; */}
+      <Profile {...user} />
+      <FriendList friends={friends} />
+      <Statistics title="Upload stats" stats={statisticalData} />
       <TransactionHistory items={transactions} />;
     </>
   );
